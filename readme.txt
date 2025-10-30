@@ -13,3 +13,7 @@ This project analyzes bikeshare data from three cities:
 ## Installation
 1. Clone the repository
 2. Run bikeshare_2.py
+
+
+## Usage
+Run the script and follow the prompts to analyze bikeshare data.
