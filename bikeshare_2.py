@@ -130,7 +130,9 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     total_duration = df['Trip Duration'].sum()
-    print('Total Travel Time:', total_duration)
+    minutes = total_duration // 60
+    hours = minutes // 60
+    print(f'Total Travel Time: {hours} hours and {minutes % 60} minutes')
 
     mean_duration = df['Trip Duration'].mean()
     print('Mean Travel Time:', mean_duration)
@@ -150,7 +152,7 @@ def user_stats(df):
     user_types = df['User Type'].value_counts()
     print('Counts of User Types:\n', user_types)
 
-    if 'Gender' in df:
+    if 'Gender' in df.columns:
         gender_counts = df['Gender'].value_counts()
         print('\nCounts of Gender:\n', gender_counts)
 
